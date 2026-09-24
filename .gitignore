@@ -12,5 +12,8 @@ desktop.ini
 .verify/
 chrome-profile*/
 
+# 设计稿预览（只在本机保留，不随站点发布）
+design-preview/
+
 # 日志
 *.log
