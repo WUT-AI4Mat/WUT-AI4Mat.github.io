@@ -85,26 +85,24 @@ const MEMBERS = [
 站点是纯静态、零依赖的，所有资源都使用相对路径，因此既可以放在域名根目录，
 也可以放在子目录（如 `ai.whut.edu.cn/ai4mat/`），两种情形都不需要改代码。
 
-### 方式一：GitHub Pages（当前使用）
+### 方式一：GitHub Pages（当前使用，已上线）
 
-- 账号：<https://github.com/WUT-AI4Mat>
-- 仓库：`WUT-AI4Mat.github.io`
+- 账号：<https://github.com/WUT-AI4Mat>（个人账号，不是组织）
+- 仓库：<https://github.com/WUT-AI4Mat/WUT-AI4Mat.github.io>
 - 远程地址：`https://github.com/WUT-AI4Mat/WUT-AI4Mat.github.io.git`
-- 站点地址：<https://wut-ai4mat.github.io/>
+- 站点地址：<https://wut-ai4mat.github.io/>（已启用 Pages，设为 User Site）
 
 仓库命名为 `WUT-AI4Mat.github.io` 的好处是站点直接发布在 `https://wut-ai4mat.github.io/` 根目录，
 不带子路径。若改用其他仓库名，站点地址会变成 `https://wut-ai4mat.github.io/<仓库名>/`，
 届时需要同步修改 `robots.txt` 与 `sitemap.xml` 中的地址。
 
-本地仓库已初始化、远程已配置并完成首次提交。在 GitHub 上创建同名仓库后，推送即可：
+本地仓库已初始化、远程已配置并完成首次提交，后续更新只需提交后推送：
 
 ```powershell
-# 第 1 步：在 https://github.com/organizations/WUT-AI4Mat/repositories/new 新建仓库
-#         名称填 WUT-AI4Mat.github.io，可见性选 Public，不要勾选任何初始化选项
-
-# 第 2 步：推送
 cd C:\Users\zhang\codex_workspace\WUT_AI4Mat
-git push -u origin main
+git add -A
+git commit -m "更新说明"
+git push
 ```
 
 > 本机经直连无法访问 github.com（443 端口被阻断），因此仓库中已配置
@@ -112,14 +110,18 @@ git push -u origin main
 > 如果代理软件换了端口或停用，可用 `git config --unset http.proxy` 与
 > `git config --unset https.proxy` 取消，再自行按需调整。
 
-推送后会弹出登录窗口，需要一个有该仓库写权限的 **Personal Access Token**（GitHub 已不支持用账号密码推送）。
-推送成功后进入仓库 Settings → Pages，Source 选 `Deploy from a branch`，
-分支选 `main`、目录选 `/ (root)`，保存后约 1 分钟即可访问。
+首次推送时会弹出登录窗口，需要一个有该仓库写权限的 **Personal Access Token**
+（GitHub 已不支持用账号密码推送，密码框里要填 Token），或直接点弹窗中的浏览器登录。
+凭据由 Windows 凭据管理器保存，之后推送不再询问。
+
+仓库的 Settings → Pages 已配置为 `Deploy from a branch`、`main` + `/ (root)`，
+每次推送后约 1 分钟自动重新发布。
 
 注意两点：
 
 1. GitHub Pages 免费版要求仓库为 **Public**，仓库内容对外可见（网站本身也是公开的）。
-2. 组织账号需在组织设置中允许使用 GitHub Pages。
+2. 该账号是个人账号，仓库名 `WUT-AI4Mat.github.io` 与账号名一致，
+   因此站点发布在 `https://wut-ai4mat.github.io/` 根目录（GitHub 的 User Site 规则）。
 
 仓库中的 `.nojekyll` 用于关闭 GitHub Pages 的 Jekyll 处理，避免下划线开头的文件被忽略。
 
