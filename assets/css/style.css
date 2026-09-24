@@ -341,8 +341,6 @@ strong { font-weight: 600; }
   font-family: var(--font-serif); font-size: .8rem !important; letter-spacing: .04em;
   color: var(--muted) !important;
 }
-.rcard-wide { grid-column: 1 / -1; }
-
 /* ============================================================
    Team
    ============================================================ */
@@ -614,7 +612,6 @@ strong { font-weight: 600; }
   .section { padding: 78px 0; }
   .hero { padding: 56px 0 72px; }
   .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-  .rcard-wide { grid-column: auto; }
   .pub-item { grid-template-columns: 1fr; gap: 12px; }
   .pub-side { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-start; text-align: left; }
   .pub-tags { justify-content: flex-start; }
