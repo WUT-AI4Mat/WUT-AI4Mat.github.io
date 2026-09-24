@@ -31,6 +31,7 @@ const THEMES = [
   { key: "mol", label: "分子与材料学习" },
   { key: "char", label: "智能表征" },
   { key: "battery", label: "电池与器件" },
+  { key: "device", label: "类脑与智能器件" },
   { key: "eff", label: "高效计算" },
   { key: "ml", label: "机器学习方法" }
 ];
@@ -40,6 +41,7 @@ const THEME_LABEL = {
   mol: "分子与材料学习",
   char: "智能表征",
   battery: "电池与器件",
+  device: "类脑与智能器件",
   eff: "高效计算",
   ml: "机器学习方法"
 };
@@ -112,6 +114,26 @@ const PUBLICATIONS = [
     badge: "IF 18.1 · 中科院一区",
     badgeType: "q",
     themes: ["battery", "llm"],
+    featured: true
+  },
+  {
+    y: 2026,
+    title: "A highly robust MoS2-xOδ volatile memtransistor array for reservoir computing",
+    authors: "Weiqi Deng, Xinyue Yan, Daihong Tang, Wei Yin, Hui Xu, Hong Zhang, Ru Su, Wen Luo*",
+    venue: "Nano Letters, 2026, 26(32): 10882-10890",
+    badge: "中科院一区",
+    badgeType: "q",
+    themes: ["device", "eff"],
+    featured: true
+  },
+  {
+    y: 2026,
+    title: "All-in-one sensing-memory-computing system based on a self-powered MoS2 P-N homojunction transistor",
+    authors: "Weiqi Deng, Xinyue Yan, Hui Xu, et al., Jun Wu, Wen Luo*",
+    venue: "Advanced Functional Materials, 2026: e75864",
+    badge: "中科院一区",
+    badgeType: "q",
+    themes: ["device", "eff"],
     featured: true
   },
   {
@@ -279,12 +301,42 @@ const PUBLICATIONS = [
   {
     y: 2025,
     title: "Sparse mixture of Mambas for domain generalized atomic electron tomography augmentation",
-    authors: "Yang Yu, Jingling Yuan*, Xian Zhong, et al.",
+    authors: "Yang Yu, Jingling Yuan*, Xian Zhong, Qihao Zhao, Wen Luo, Liqiang Mai",
     venue: "IEEE TNNLS, 2025",
     badge: "CCF A",
     badgeType: "a",
     themes: ["char"],
     featured: true
+  },
+  {
+    y: 2025,
+    title: "Linearly programmable oxygen-doped MoS2 memtransistor for neuromorphic computing",
+    authors: "Weiqi Deng, Yang Yu, Xinyue Yan, Liu Wang, Nian Yu, Xing Liao, Wen Luo*, Jun Wu",
+    venue: "ACS Nano, 2025, 19(30): 27526-27537",
+    badge: "中科院一区",
+    badgeType: "q",
+    themes: ["device", "eff"],
+    featured: true
+  },
+  {
+    y: 2025,
+    title: "Ultra-high switching ratio memtransistor based on van der Waals heterostructures toward neuromorphic computing",
+    authors: "Weiqi Deng, Yang Yu, Xinyue Yan, Yuxuan Li, Liu Wang, Jun Wu, Jean-Jacques Gaumet, Wen Luo*",
+    venue: "Energy & Environmental Materials, 2025, 8(6): e70075",
+    badge: "中科院一区",
+    badgeType: "q",
+    themes: ["device"],
+    featured: false
+  },
+  {
+    y: 2025,
+    title: "Low-power reconfigurable MoS2/MoTe2 optoelectronic synapse for visual recognition",
+    authors: "Xinyue Yan, Weiqi Deng, Nian Yu, Jun Wu, Xin Zhang, Wen Luo*",
+    venue: "Nano Research, 2025, 18: 94907741",
+    badge: "中科院一区",
+    badgeType: "q",
+    themes: ["device"],
+    featured: false
   },
   {
     y: 2025,
@@ -361,12 +413,22 @@ const PUBLICATIONS = [
   {
     y: 2024,
     title: "Key substructure learning with chemical intuition for material property prediction",
-    authors: "Peiliang Zhang, Jingling Yuan*, Lin Li, et al.",
+    authors: "Peiliang Zhang, Jingling Yuan*, Lin Li, Wen Luo, Jian Hu, Xin Li",
     venue: "DASFAA 2024",
     badge: "CCF B",
     badgeType: "b",
     themes: ["mol"],
     featured: true
+  },
+  {
+    y: 2024,
+    title: "Two-dimensional materials based memtransistors: integration strategies, switching mechanisms and advanced characterizations",
+    authors: "Weiqi Deng, Xinyue Yan, Liu Wang, Nian Yu, Wen Luo*, Liqiang Mai*",
+    venue: "Nano Energy, 2024, 128: 109861",
+    badge: "中科院一区",
+    badgeType: "q",
+    themes: ["device"],
+    featured: false
   },
   {
     y: 2024,
