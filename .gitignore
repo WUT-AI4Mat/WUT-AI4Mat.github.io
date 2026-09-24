@@ -1,0 +1,16 @@
+# 操作系统与编辑器
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+*~
+.vscode/
+.idea/
+
+# 站点的临时校验 / 内容抓取产物（不属于站点文件）
+.fetch/
+.verify/
+chrome-profile*/
+
+# 日志
+*.log

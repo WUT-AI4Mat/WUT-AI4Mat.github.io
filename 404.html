@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>页面不存在 · WUT-AI4Mat 实验室</title>
+<meta name="robots" content="noindex" />
+<style>
+  /* 404 页面刻意不引用任何外部资源，保证在任何路径下都能正确显示 */
+  :root { --paper:#fbfaf7; --ink:#14161a; --muted:#6c727d; --accent:#0e6b62; --line:#e5e2da; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:var(--paper); color:var(--ink); padding:32px;
+    font-family:"Inter","HarmonyOS Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.8;
+    background-image:
+      radial-gradient(760px 460px at 88% -6%, rgba(14,107,98,.12), transparent 62%),
+      radial-gradient(620px 420px at 4% 8%, rgba(180,101,58,.08), transparent 60%);
+  }
+  .card { max-width:520px; text-align:center; }
+  .code {
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:74px; line-height:1; color:var(--accent); letter-spacing:.02em;
+  }
+  h1 { font-size:1.4rem; font-weight:600; margin:22px 0 12px; letter-spacing:-.01em; }
+  p { margin:0 0 10px; color:var(--muted); font-size:.96rem; }
+  .actions { margin-top:28px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  a.btn {
+    display:inline-block; padding:12px 26px; border-radius:999px; text-decoration:none;
+    background:var(--accent); color:#fff; font-size:.95rem; transition:background-color .25s ease, transform .25s ease;
+  }
+  a.btn:hover { background:#0a4a44; transform:translateY(-2px); }
+  a.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
+  a.ghost:hover { background:transparent; border-color:var(--accent); color:var(--accent); }
+  .foot { margin-top:34px; padding-top:18px; border-top:1px solid var(--line); font-size:.82rem; color:var(--muted); }
+  .foot a { color:var(--accent); text-decoration:none; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="code">404</div>
+    <h1>页面不存在</h1>
+    <p>你访问的地址可能已经变更，或者输入有误。</p>
+    <p>这里是武汉理工大学 WUT-AI4Mat 实验室（人工智能 + 材料科学交叉研究）的网站。</p>
+    <div class="actions">
+      <a class="btn" id="homeLink" href="/">返回实验室首页</a>
+    </div>
+    <p class="foot">
+      如需联系，可发送邮件至
+      <a href="mailto:yuanjingling@126.com">yuanjingling@126.com</a> 或
+      <a href="mailto:luowen_1991@whut.edu.cn">luowen_1991@whut.edu.cn</a>
+    </p>
+  </main>
+
+  <script>
+    // 站点可能部署在根目录（自定义域名）或子目录（GitHub Pages 项目站点 / 学校子目录），
+    // 这里按「取路径前两段」的方式推算站点根，两种情形都能正确回到首页。
+    (function () {
+      var segs = location.pathname.split("/").filter(Boolean);
+      var base = segs.length >= 2 ? "/" + segs[0] + "/" : "/";
+      var link = document.getElementById("homeLink");
+      if (link) link.setAttribute("href", base);
+    })();
+  </script>
+</body>
+</html>
