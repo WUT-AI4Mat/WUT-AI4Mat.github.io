@@ -260,6 +260,16 @@ const PUBLICATIONS = [
   // ===== 2025 =====
   {
     y: 2025,
+    title: "Activating inert non-defect sites in Bi catalysts using tensile strain engineering for highly active CO2 electroreduction",
+    authors: "X. Chen, R. Lu, C. Li, Wen Luo, R. Yu, J. Zhu, L. Lv, Y. Dai, et al.",
+    venue: "Nature Communications, 2025, 16(1): 1927",
+    badge: "Nature 子刊 · 中科院一区",
+    badgeType: "q",
+    themes: ["battery"],
+    featured: true
+  },
+  {
+    y: 2025,
     title: "Zero-shot learning for materials science texts: leveraging duck typing principles",
     authors: "Xin Zhang, Peiliang Zhang, Jingling Yuan*, Lin Li",
     venue: "AAAI 2025",
@@ -406,6 +416,26 @@ const PUBLICATIONS = [
     badge: "中文核心",
     badgeType: "b",
     themes: ["ml"],
+    featured: false
+  },
+  {
+    y: 2025,
+    title: "Understanding the microstructure effects of graphite electrode in lithium-ion batteries through multi-physics simulation",
+    authors: "Wen Luo, J. Y. Jiao, J. Wang, Y. L. Duan, Z. H. Shen",
+    venue: "Applied Physics Letters, 2025, 126(12)",
+    badge: "建模与仿真",
+    badgeType: "b",
+    themes: ["battery"],
+    featured: false
+  },
+  {
+    y: 2025,
+    title: "Computational study on two-dimensional transition metal borides for enhanced lithium-sulfur battery performance",
+    authors: "K. Fei, Q. He, M. Wu, J. Liu, Z. Wei, Wen Luo, Y. Zhao*",
+    venue: "Journal of Colloid and Interface Science, 2025, 680: 666-675",
+    badge: "计算材料学",
+    badgeType: "b",
+    themes: ["battery"],
     featured: false
   },
 

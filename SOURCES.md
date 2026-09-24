@@ -38,6 +38,9 @@
   2. 类脑计算与智能器件：二维材料神经形态器件、感存算一体与光电突触等工作，
      收录于「类脑与智能器件」标签下（Nano Letters 2026、Advanced Functional Materials 2026、
      ACS Nano 2025、Energy & Environmental Materials 2025、Nano Research 2025、Nano Energy 2024）。
+- 另收录罗雯老师参与的高影响力与计算类成果：Nature Communications 2025（拉伸应变调控 Bi 催化剂 CO₂ 电还原，
+  16(1): 1927）、Applied Physics Letters 2025（石墨电极微结构多物理场仿真，第一作者）、
+  Journal of Colloid and Interface Science 2025（二维过渡金属硼化物用于锂硫电池的计算研究）。
 - 「高效绿色计算」研究方向同步补充了器件层面的表述，与上述器件类成果对应。
 - 页面上「研究方向的表述」为对公开研究方向与论文主题的归纳，非原文照搬；
   如需更严格的官方表述，可在 `index.html` 的研究方向区块直接调整文案。
