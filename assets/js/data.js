@@ -72,18 +72,18 @@ const FACULTY = [
     name: "罗雯",
     en: "Wen LUO",
     role: "特岗教授 · 博士生导师",
-    org: "理学院物理系",
+    org: "物理与力学学院",
     photo: "assets/img/luo-wen.jpg",
     tags: ["电化学储能材料", "微纳器件物理", "原位表征技术"],
     bio:
-      "武汉理工大学理学院物理系特岗教授、博士生导师，第七届中国科协青年人才托举工程入选者，" +
+      "武汉理工大学物理与力学学院特岗教授、博士生导师，第七届中国科协青年人才托举工程入选者，" +
       "武汉理工大学青年拔尖人才（第二层次）。主要研究方向为电化学储能材料、微纳器件物理与原位表征技术，" +
       "聚焦二维金属烯微纳器件的原位监测、电化学析氢增强机理与储能电池复杂界面的多维表征调控。" +
       "主持国家自然科学基金面上、青年项目及湖北省自然科学基金项目，承担国家重大科研仪器项目子任务、" +
       "国家重点研发计划子任务，在 Advanced Materials、Advanced Energy Materials、ACS Energy Letters 等期刊发表论文，" +
       "2 篇入选高被引论文，h-index 52。指导学生获“挑战杯”全国特等奖、银奖等。",
     links: [
-      { text: "理学院主页", url: "http://ssci.whut.edu.cn/szdw/zrjs/202309/t20230921_939697.shtml" },
+      { text: "教师主页", url: "http://ssci.whut.edu.cn/szdw/zrjs/202309/t20230921_939697.shtml" },
       { text: "材料学院导师页", url: "http://smse.whut.edu.cn/yjspy/dsdw/202311/t20231126_969506.shtml" },
       { text: "Google Scholar", url: "https://scholar.google.com/citations?user=D9qoVOoAAAAJ&hl=en" },
       { text: "luowen_1991@whut.edu.cn", url: "mailto:luowen_1991@whut.edu.cn" }
