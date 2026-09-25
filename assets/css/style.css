@@ -277,13 +277,6 @@ strong { font-weight: 600; }
 }
 .about-main p { color: var(--ink-2); margin-bottom: 20px; }
 .about-main strong { color: var(--ink); }
-.about-quote {
-  margin-top: 30px !important; padding: 20px 24px;
-  border-left: 3px solid var(--accent); background: var(--accent-soft);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  color: var(--accent-deep) !important; font-size: 1rem;
-}
-
 .about-side { display: grid; gap: 18px; }
 .side-card {
   background: var(--surface); border: 1px solid var(--line);
