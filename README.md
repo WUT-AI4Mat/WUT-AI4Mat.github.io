@@ -1,153 +1,105 @@
-# WUT-AI4Mat 实验室网站
+# WUT-AI4Mat 实验室
 
-武汉理工大学 WUT-AI4Mat 实验室（人工智能 + 材料科学交叉研究）的静态宣传站点。
-纯 HTML / CSS / JavaScript，无任何依赖与构建步骤，可直接部署到任意静态托管。
+**武汉理工大学 · 人工智能与材料交叉研究（AI for Materials）**
 
-## 目录结构
+🌐 网站：<https://wut-ai4mat.github.io/>
 
-```
-index.html                 页面结构（含所有静态文案）
-404.html                   找不到页面时的提示页（不依赖外部资源）
-assets/css/style.css       全部样式
-assets/js/data.js          可维护内容：师资、成员、论文、项目、专利  ← 日常主要改这里
-assets/js/main.js          渲染与交互逻辑
-assets/img/                教师照片、站点图标
-robots.txt / sitemap.xml   搜索引擎收录配置
-.nojekyll                  GitHub Pages 所需的空文件
-SOURCES.md                 内容来源与整理说明
-```
+实验室简介 · [研究方向](#研究方向) · [研究团队](#研究团队) · [代表性成果](#代表性成果) · [联系我们](#联系我们)
 
-## 本地预览
+---
 
-直接双击 `index.html` 即可；如需更接近线上的效果（避免个别浏览器对 `file://` 的限制），可起一个本地服务：
+## 实验室简介
 
-```powershell
-python -m http.server 8000
-# 浏览器打开 http://localhost:8000
-```
+WUT-AI4Mat 实验室由武汉理工大学**人工智能学院袁景凌教授**与**物理与力学学院罗雯教授**共同领衔，
+是面向"人工智能 + 材料科学"交叉前沿的研究团队。团队一端扎根于机器学习、大数据处理与边缘智能，
+另一端深耕电化学储能材料、微纳器件物理与原位表征技术，用同一套方法语言回应材料研究中的共性问题。
 
-## 如何更新内容
+我们相信材料科学研究正在从"单次实验驱动"走向"数据与知识驱动"：
+材料文献中的隐含知识、分子与晶体结构中的构效关系、原位/operando 表征产生的高维时序数据，
+以及电池器件在真实工况下的失效行为，都是亟待被模型化、可解释化的科学对象。
+实验室围绕这条链路，构建可迁移、可解释、可落地在实验现场的智能方法。
 
-所有需要长期维护的内容都集中在 `assets/js/data.js`，改完后刷新页面即可生效。
+## 研究方向
 
-| 想改什么 | 改哪里 |
-| --- | --- |
-| 首页统计数字（带头人、论文数、被引数） | `SITE.stats` |
-| 教师简介、职称、研究方向、链接 | `FACULTY` |
-| 研究生团队成员 | `MEMBERS`（见下方示例） |
-| 论文列表 / 精选标记 | `PUBLICATIONS` |
-| 科研项目 | `PROJECTS` |
-| 专利与著作 | `PATENTS` |
-| 实验室简介、研究方向、联系方式的正文 | `index.html` |
+以人工智能方法为主线，向下贯穿材料知识、分子结构、表征数据与器件体系，并延展至支撑科学计算的算法与器件两端。
 
-### 添加研究生成员
+| # | 方向 | 关注的问题 |
+| --- | --- | --- |
+| 01 | **材料科学大模型与知识抽取** | 文献与专利中的零样本信息抽取、主动知识结构化、领域知识增强生成 |
+| 02 | **分子与材料关系学习** | 分子图表示对齐、子图信息瓶颈、关键子结构学习与可解释的构效关系建模 |
+| 03 | **智能表征与显微图像分析** | 原子电子断层扫描、电子衍射解析、原位拉曼与 X 射线联用数据的增强与重建 |
+| 04 | **电池智能诊断与安全运维** | 电池失效诊断、健康状态评估，与储能材料、器件机理研究互为验证 |
+| 05 | **高效绿色计算与智能器件** | 模型量化与机器遗忘、边缘推理与云边协同；二维材料神经形态器件与感存算一体 |
 
-`MEMBERS` 目前为空数组，页面会显示「名单持续更新中」的提示卡片。
-补充成员后自动变为卡片列表：
+## 研究团队
 
-```js
-const MEMBERS = [
-  {
-    name: "张三",
-    en: "San ZHANG",
-    grade: "2024 级博士研究生",
-    topic: "材料科学文本挖掘与知识抽取",
-    email: "zhangsan@whut.edu.cn"
-  }
-];
-```
+### 袁景凌 · 教授 / 博士生导师
 
-### 添加论文
+武汉理工大学人工智能学院教授，交通物联网技术湖北省重点实验室主任，CCF 杰出会员、CCF 体系结构专委会委员，
+湖北省计算机学会理事/副秘书长。主要研究兴趣包括机器学习、绿色计算、边缘智能与 AI4Science。
+在 ICML、AAAI、KDD、IJCAI、ICCV/ECCV、ACM MM 及 TC、TMM、TMC、TNNLS、TACL 等会议与期刊发表论文 80 余篇，
+获国家发明专利 25 项，编写专著教材 10 余本。
 
-```js
-{
-  y: 2026,                       // 年份，列表按年份倒序自动分组
-  title: "论文标题（建议保留原始英文标题）",
-  authors: "Xin Zhang, Jingling Yuan*, Wen Luo*",  // 两位老师会被自动加粗标注
-  venue: "KDD 2026",
-  badge: "CCF A",                // 右上角标注文字
-  badgeType: "a",                // a=青绿底（CCF/顶会） q=铜色底（期刊分区） b=灰色底
-  themes: ["mol", "battery"],    // 方向标签，取值见 THEMES
-  featured: true                 // 是否进入首页默认的「WUT-AI4Mat 精选」
-}
-```
+🔗 [学院主页](https://ai.whut.edu.cn/szdw/jsml/202509/t20250919_1349796.shtml) ·
+[Google Scholar](https://scholar.google.com/citations?user=0k0SnZkAAAAJ&hl=en) · yuanjingling@126.com
 
-方向标签取值：`llm` 材料大模型 / `mol` 分子与材料学习 / `char` 智能表征 /
-`battery` 电池与器件 / `eff` 高效计算 / `ml` 机器学习方法。
+### 罗雯 · 特岗教授 / 博士生导师
 
-### 替换教师照片
+武汉理工大学物理与力学学院特岗教授，第七届中国科协青年人才托举工程入选者，武汉理工大学青年拔尖人才（第二层次）。
+主要研究方向为电化学储能材料、微纳器件物理与原位表征技术，聚焦二维金属烯微纳器件的原位监测与储能电池界面的多维表征调控。
+在 Advanced Materials、Advanced Energy Materials、ACS Energy Letters、Nature Communications 等期刊发表论文，
+2 篇入选高被引论文，h-index 52。
 
-把照片放到 `assets/img/` 下，再修改 `FACULTY` 中对应的 `photo` 路径。
-建议使用 3:4 竖版照片（宽 400px 以上），页面会自动裁切填充。
+🔗 [教师主页](http://ssci.whut.edu.cn/szdw/zrjs/202309/t20230921_939697.shtml) ·
+[材料学院导师页](http://smse.whut.edu.cn/yjspy/dsdw/202311/t20231126_969506.shtml) ·
+[Google Scholar](https://scholar.google.com/citations?user=D9qoVOoAAAAJ&hl=en) · luowen_1991@whut.edu.cn
 
-## 部署
+实验室现有博士研究生、硕士研究生若干名，成员围绕 AI for Materials 方向协同攻关。
 
-站点是纯静态、零依赖的，所有资源都使用相对路径，因此既可以放在域名根目录，
-也可以放在子目录（如 `ai.whut.edu.cn/ai4mat/`），两种情形都不需要改代码。
+## 代表性成果
 
-### 方式一：GitHub Pages（当前使用，已上线）
+团队成果发表于 ICML、AAAI、KDD、IJCAI、ICCV/ECCV、ACM MM、WSDM 等人工智能顶级会议，
+以及 National Science Review、Nature Communications、Advanced Materials、Advanced Energy Materials、
+ACS Energy Letters、IEEE TNNLS / TMC、TACL 等期刊，共发表论文 160 余篇，
+其中 CCF A 类会议与中科院一区期刊论文 50 余篇，并获国家发明专利 28 项。
 
-- 账号：<https://github.com/WUT-AI4Mat>（个人账号，不是组织）
-- 仓库：<https://github.com/WUT-AI4Mat/WUT-AI4Mat.github.io>
-- 远程地址：`https://github.com/WUT-AI4Mat/WUT-AI4Mat.github.io.git`
-- 站点地址：<https://wut-ai4mat.github.io/>（已启用 Pages，设为 User Site）
+部分代表工作：
 
-仓库命名为 `WUT-AI4Mat.github.io` 的好处是站点直接发布在 `https://wut-ai4mat.github.io/` 根目录，
-不带子路径。若改用其他仓库名，站点地址会变成 `https://wut-ai4mat.github.io/<仓库名>/`，
-届时需要同步修改 `robots.txt` 与 `sitemap.xml` 中的地址。
+- **知识增强大语言模型的电池失效诊断** —— *National Science Review* 2026（IF 18.1）
+- **拉伸应变调控 Bi 催化剂的 CO₂ 电还原** —— *Nature Communications* 2025
+- **材料科学文本的零样本抽取与主动知识结构化** —— *AAAI* 2025 / *TACL* 2025
+- **稳定且可解释的分子关系学习** —— *KDD* 2026 / *IJCAI* 2025 / *DASFAA* 2024
+- **原子电子断层扫描的域泛化增强** —— *IEEE TNNLS* 2025 / *IEEE TIM* 2024
+- **二维材料神经形态器件与感存算一体** —— *Nano Letters* 2026 / *ACS Nano* 2025 / *Adv. Funct. Mater.* 2026
 
-本地仓库已初始化、远程已配置并完成首次提交，后续更新只需提交后推送：
+更完整的成果列表（69 篇代表性论文，可按方向筛选）见[实验室网站](https://wut-ai4mat.github.io/#publications)。
 
-```powershell
-cd C:\Users\zhang\codex_workspace\WUT_AI4Mat
-git add -A
-git commit -m "更新说明"
-git push
-```
+## 依托平台
 
-> **推送时的网络设置**：本机直连 github.com 不稳定（443 常被阻断），需借助本机代理软件。
-> 该软件通常提供两个入口，实测表现不同：
-> - HTTP 入口 `http://127.0.0.1:7890` —— 可访问 github.io、api.github.com，但连 github.com 会出现 TLS 握手失败
-> - SOCKS5 入口 `socks5h://127.0.0.1:7891` —— 连 github.com 正常（当前使用这个）
->
-> 仓库级配置已设为 SOCKS5。若某天推送失败，可先试另一个入口：
-> `git config http.proxy socks5h://127.0.0.1:7891`；
-> 直连可用时则用 `git config --unset http.proxy && git config --unset https.proxy` 取消代理。
+- 武汉理工大学人工智能学院
+- 武汉理工大学材料科学与工程学院
+- 武汉理工大学物理与力学学院
+- 硅酸盐建筑材料全国重点实验室
+- 材料复合新技术全国重点实验室
+- 交通物联网技术湖北省重点实验室
 
-首次推送时会弹出登录窗口，需要一个有该仓库写权限的 **Personal Access Token**
-（GitHub 已不支持用账号密码推送，密码框里要填 Token），或直接点弹窗中的浏览器登录。
-凭据由 Windows 凭据管理器保存，之后推送不再询问。
+## 联系我们
 
-仓库的 Settings → Pages 已配置为 `Deploy from a branch`、`main` + `/ (root)`，
-每次推送后约 1 分钟自动重新发布。
+- **邮箱**：yuanjingling@126.com（袁景凌）｜ luowen_1991@whut.edu.cn（罗雯）
+- **地址**：湖北省武汉市洪山区珞狮路 122 号 武汉理工大学（马房山校区）· 邮编 430070
+- **方向概览**：AI 方向（机器学习 / 大模型 / 智能体 / 高效推理与边缘计算）；
+  材料方向（电化学储能材料 / 微纳器件物理 / 原位表征技术）；
+  交叉方向（材料科学文本挖掘 / 电池智能诊断 / 表征数据解析）
 
-注意两点：
+欢迎学术交流、合作研究与人才培养方面的联系。
 
-1. GitHub Pages 免费版要求仓库为 **Public**，仓库内容对外可见（网站本身也是公开的）。
-2. 该账号是个人账号，仓库名 `WUT-AI4Mat.github.io` 与账号名一致，
-   因此站点发布在 `https://wut-ai4mat.github.io/` 根目录（GitHub 的 User Site 规则）。
+---
 
-仓库中的 `.nojekyll` 用于关闭 GitHub Pages 的 Jekyll 处理，避免下划线开头的文件被忽略。
+## 关于本站
 
-### 方式二：学校 / 学院服务器（后续迁移）
+本站是实验室的静态宣传站点，纯 HTML / CSS / JavaScript，无构建步骤与外部依赖，
+可直接部署到任意静态托管。目录结构、内容维护方式（如何增删论文、成员、项目）与部署流程，
+见 [MAINTENANCE.md](MAINTENANCE.md)。
 
-把整个目录上传到分配到的目录（如 `ai.whut.edu.cn/ai4mat/`）即可，无需任何构建步骤。
-校园域名已完成备案，迁移后建议同步更新 `robots.txt` 与 `sitemap.xml` 中的地址。
-
-### 其他
-
-- 无需 Node.js、无需构建流程，也没有任何第三方依赖（无外部字体、无 CDN 请求）。
-- 使用虚拟主机（如阿里云 OSS、腾讯云 COS 静态托管）同样上传整个目录即可；
-  但绑定自己的域名需要先完成 ICP 备案。
-
-## 无障碍与兼容
-
-- 语义化结构、图片 `alt`、键盘可达的导航与筛选按钮。
-- 支持 `prefers-reduced-motion`，对减少动效的用户关闭进场动画。
-- 已在 1440px 桌面端与 390px 移动端验证：无横向溢出、无脚本报错。
-
-## 待补充
-
-1. 研究生团队成员名单（`MEMBERS`）。
-2. 如需更完整的论文列表，可按需继续补充 `PUBLICATIONS`（当前收录 60 篇代表性成果）。
-3. 实验室英文名称如需统一表述，可修改 `SITE` 与页脚文案。
+内容整理依据两位老师的公开主页与 Google Scholar，来源与口径说明见 [SOURCES.md](SOURCES.md)。
+如发现信息有误或需要更新，欢迎提 Issue 或邮件告知。
