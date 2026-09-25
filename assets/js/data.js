@@ -283,8 +283,8 @@ const PUBLICATIONS = [
     title: "Active knowledge structuring for large language models in materials science text mining",
     authors: "Xin Zhang, Jingling Yuan*, Peiliang Zhang, Jia Liu, Lin Li",
     venue: "Transactions of the ACL (TACL), 2025",
-    badge: "JCR Q1 · 中科院二区",
-    badgeType: "q",
+    badge: "CCF B",
+    badgeType: "b",
     themes: ["llm"],
     featured: true
   },
