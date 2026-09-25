@@ -105,10 +105,14 @@ git commit -m "更新说明"
 git push
 ```
 
-> 本机经直连无法访问 github.com（443 端口被阻断），因此仓库中已配置
-> 仓库级代理 `http.proxy = http://127.0.0.1:7890`（对应系统里已开启的代理软件）。
-> 如果代理软件换了端口或停用，可用 `git config --unset http.proxy` 与
-> `git config --unset https.proxy` 取消，再自行按需调整。
+> **推送时的网络设置**：本机直连 github.com 不稳定（443 常被阻断），需借助本机代理软件。
+> 该软件通常提供两个入口，实测表现不同：
+> - HTTP 入口 `http://127.0.0.1:7890` —— 可访问 github.io、api.github.com，但连 github.com 会出现 TLS 握手失败
+> - SOCKS5 入口 `socks5h://127.0.0.1:7891` —— 连 github.com 正常（当前使用这个）
+>
+> 仓库级配置已设为 SOCKS5。若某天推送失败，可先试另一个入口：
+> `git config http.proxy socks5h://127.0.0.1:7891`；
+> 直连可用时则用 `git config --unset http.proxy && git config --unset https.proxy` 取消代理。
 
 首次推送时会弹出登录窗口，需要一个有该仓库写权限的 **Personal Access Token**
 （GitHub 已不支持用账号密码推送，密码框里要填 Token），或直接点弹窗中的浏览器登录。
