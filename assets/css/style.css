@@ -81,6 +81,8 @@ strong { font-weight: 600; }
 
 .section { padding: 108px 0; position: relative; }
 .section-alt { background: var(--paper-2); }
+/* 首屏与简介区之间不必留出整节的内边距，收窄这一段 */
+#about { padding-top: 72px; }
 
 /* 不设 max-width：导语按容器实际可用宽度铺满，避免提前折行 */
 .section-head { margin-bottom: 54px; }
@@ -161,7 +163,7 @@ strong { font-weight: 600; }
 /* ============================================================
    Hero
    ============================================================ */
-.hero { position: relative; overflow: hidden; padding: 84px 0 96px; }
+.hero { position: relative; overflow: hidden; padding: 84px 0 60px; }
 .hero-bg {
   position: absolute; inset: 0; pointer-events: none;
   background:
@@ -611,7 +613,8 @@ strong { font-weight: 600; }
   .primary-nav a { padding: 13px 14px; border-radius: 10px; font-size: 1rem; }
   .primary-nav a.is-active::after { display: none; }
   .section { padding: 78px 0; }
-  .hero { padding: 56px 0 72px; }
+  .hero { padding: 56px 0 52px; }
+  #about { padding-top: 60px; }
   .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
   .pub-item { grid-template-columns: 1fr; gap: 12px; }
   .pub-side { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-start; text-align: left; }
