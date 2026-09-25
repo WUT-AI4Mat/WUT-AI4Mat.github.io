@@ -82,7 +82,7 @@ strong { font-weight: 600; }
 .section { padding: 108px 0; position: relative; }
 .section-alt { background: var(--paper-2); }
 
-.section-head { max-width: 760px; margin-bottom: 54px; }
+.section-head { max-width: 840px; margin-bottom: 54px; }
 .section-head h2 {
   font-size: clamp(1.72rem, 3.2vw, 2.42rem);
   letter-spacing: -0.02em;
