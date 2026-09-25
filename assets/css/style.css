@@ -142,6 +142,10 @@ strong { font-weight: 600; }
 .brand-text strong {
   font-family: var(--font-serif); font-size: 1.06rem; letter-spacing: .02em; font-weight: 600;
 }
+/* 中文部分用无衬线体，与全站「拉丁文用衬线、中文用无衬线」的习惯一致 */
+.brand-text strong .brand-cn {
+  font-family: var(--font-sans); font-size: .88em; font-weight: 600; letter-spacing: .04em;
+}
 .brand-text em {
   font-size: .72rem; color: var(--muted); letter-spacing: .06em;
 }
