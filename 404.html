@@ -7,7 +7,8 @@
 <meta name="robots" content="noindex" />
 <style>
   /* 404 页面刻意不引用任何外部资源，保证在任何路径下都能正确显示 */
-  :root { --paper:#fbfaf7; --ink:#14161a; --muted:#6c727d; --accent:#0e6b62; --line:#e5e2da; }
+  /* 主题色与主站保持一致（蓝色系；上一版绿色系为 #0e6b62 / #0a4a44） */
+  :root { --paper:#fbfaf7; --ink:#14161a; --muted:#6c727d; --accent:#1f4e79; --accent-deep:#143352; --line:#e5e2da; }
   * { box-sizing:border-box; }
   body {
     margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
@@ -15,7 +16,7 @@
     font-family:"Inter","HarmonyOS Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
     line-height:1.8;
     background-image:
-      radial-gradient(760px 460px at 88% -6%, rgba(14,107,98,.12), transparent 62%),
+      radial-gradient(760px 460px at 88% -6%, rgba(31,78,121,.12), transparent 62%),
       radial-gradient(620px 420px at 4% 8%, rgba(180,101,58,.08), transparent 60%);
   }
   .card { max-width:520px; text-align:center; }
@@ -30,7 +31,7 @@
     display:inline-block; padding:12px 26px; border-radius:999px; text-decoration:none;
     background:var(--accent); color:#fff; font-size:.95rem; transition:background-color .25s ease, transform .25s ease;
   }
-  a.btn:hover { background:#0a4a44; transform:translateY(-2px); }
+  a.btn:hover { background:var(--accent-deep); transform:translateY(-2px); }
   a.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
   a.ghost:hover { background:transparent; border-color:var(--accent); color:var(--accent); }
   .foot { margin-top:34px; padding-top:18px; border-top:1px solid var(--line); font-size:.82rem; color:var(--muted); }
