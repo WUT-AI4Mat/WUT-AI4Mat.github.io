@@ -82,17 +82,13 @@ strong { font-weight: 600; }
 .section { padding: 108px 0; position: relative; }
 .section-alt { background: var(--paper-2); }
 
-.section-head { max-width: 1000px; margin-bottom: 54px; }
+/* 不设 max-width：导语按容器实际可用宽度铺满，避免提前折行 */
+.section-head { margin-bottom: 54px; }
 .section-head h2 {
   font-size: clamp(1.72rem, 3.2vw, 2.42rem);
   letter-spacing: -0.02em;
-  text-wrap: balance;
 }
-.section-lede {
-  margin-top: 18px; color: var(--ink-2); font-size: 1.02rem;
-  /* 让必须折行的段落两端字数均衡，避免末尾只剩几个字 */
-  text-wrap: balance;
-}
+.section-lede { margin-top: 18px; color: var(--ink-2); font-size: 1.02rem; }
 
 /* ---------- 按钮 ---------- */
 .btn {
@@ -406,10 +402,7 @@ strong { font-weight: 600; }
   font-size: .92rem; color: var(--muted);
 }
 .member-placeholder svg { width: 26px; height: 26px; flex: none; color: var(--accent); opacity: .8; }
-.members-note {
-  margin-top: 18px; font-size: .9rem; color: var(--muted); max-width: 820px;
-  text-wrap: balance;
-}
+.members-note { margin-top: 18px; font-size: .9rem; color: var(--muted); }
 
 /* ============================================================
    Publications
