@@ -145,6 +145,52 @@ git push
 - 使用虚拟主机（如阿里云 OSS、腾讯云 COS 静态托管）同样上传整个目录即可；
   但绑定自己的域名需要先完成 ICP 备案。
 
+## 搜索引擎收录（SEO）
+
+### 站点侧已完成的配置
+
+- `title` / `description` / `keywords`，页面语言 `lang="zh-CN"`
+- `rel="canonical"`、`og:*`（含 1200×630 分享封面 `assets/img/og-cover.png`）、`twitter:card`
+- **结构化数据（JSON-LD）**：把实验室作为 `Organization`、两位老师作为 `Person`、
+  站点作为 `WebSite` 声明，并列出 `knowsAbout`（研究方向关键词）与官方主页链接
+- `robots.txt` + `sitemap.xml`（已指向真实站点地址）、`404.html`、`.nojekyll`
+- 语义化标题层级、移动端自适应、无外部依赖（首屏快，利于抓取与评分）
+
+### 需要人工提交的部分
+
+收录与否最终取决于搜索引擎，以下三步需要自己操作（都需要相应账号）：
+
+1. **Google Search Console**（<https://search.google.com/search-console>）
+   添加资源 `https://wut-ai4mat.github.io/`，用「HTML 标记」或「HTML 文件」方式验证，
+   验证后提交 `https://wut-ai4mat.github.io/sitemap.xml`。
+2. **Bing Webmaster Tools**（<https://www.bing.com/webmasters>）
+   可直接从 Google Search Console 导入站点与站点地图。
+3. **百度搜索资源平台**（<https://ziyuan.baidu.com>）
+   同样需要验证后提交 sitemap。注意：百度对 `github.io` 的收录历来很慢且不稳定，
+   建议等站点迁到学校域名（`whut.edu.cn` 三级域名或子目录）后再重点提交。
+
+### 提升排名最有效的一件事：外部链接
+
+搜索引擎判断新站点权重的核心是「有多少可信站点链接到你」。建议按性价比顺序推进：
+
+1. **学院/学校官网**：请人工智能学院、物理与力学学院在教师页或实验室页加上本站链接
+   （学校域名的外链权重远高于普通站点）
+2. **两位老师的个人主页**：学院主页、材料学院导师页的"个人网站"字段填本站在地址
+3. **GitHub 仓库首页**：仓库右上角 About 的 Website 填 `https://wut-ai4mat.github.io/`，
+   Topics 填 `ai-for-materials`、`materials-informatics`、`large-language-models`、`battery` 等
+4. **论文与学术主页**：新论文的 arXiv/期刊页面、Google Scholar 个人主页、
+   会议报告 PPT 的尾页附上本站地址
+5. **迁移到学校域名后**：把 `robots.txt`、`sitemap.xml`、canonical 与 og:url 换成新地址，
+   并在旧地址保留跳转说明
+
+### 如何检查收录情况
+
+- 在 Google / Bing 搜索 `site:wut-ai4mat.github.io`，有结果即已被收录
+- 直接搜索 `WUT-AI4Mat`、`武汉理工大学 AI4Mat 实验室`、`袁景凌 罗雯 实验室` 等关键词看排名
+- 结构化数据可用 <https://search.google.com/test/rich-results> 校验
+
+新站点的收录通常需要数天到数周，且需要外部链接才能稳定获得排名，属于正常现象。
+
 ## 无障碍与兼容
 
 - 语义化结构、图片 `alt`、键盘可达的导航与筛选按钮。
