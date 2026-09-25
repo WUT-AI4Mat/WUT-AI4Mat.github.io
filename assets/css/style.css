@@ -296,13 +296,6 @@ strong { font-weight: 600; }
   background: var(--accent); opacity: .8;
   transform: rotate(45deg);
 }
-/* 平台卡片里的外链：保持列表观感，悬停时才显出可点击 */
-.ticks a {
-  color: inherit;
-  border-bottom: 1px solid rgba(14, 107, 98, .28);
-  transition: color .22s var(--ease), border-color .22s var(--ease);
-}
-.ticks a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .side-card-accent { background: var(--copper-soft); border-color: #ecd9cd; }
 .side-card-accent h3 { color: var(--copper); }
 
